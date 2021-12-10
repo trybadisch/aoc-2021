@@ -4,11 +4,11 @@
 
 ## Day 1: Sonar Sweep
 
-![Day 1](img/day1.png)
+![Day 1](img/carbon1.png)
 
 ## Day 2: Dive!
 
-![Day 2](img/day2.png)
+![Day 2](img/carbon2.png)
 
 ## Day 3: Binary Diagnostic
 
@@ -61,7 +61,7 @@ for i in range(max(crabs)):
         pos = i
 print("[+] Position =", pos, "/ Fuel =", fuel)
 ```
-![Day 7](img/day7.png)
+![Day 7](img/carbon7.png)
 
 ## Day 8: Seven Segment Search
 
