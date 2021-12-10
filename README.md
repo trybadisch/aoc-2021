@@ -14,6 +14,7 @@ Day | Name | Solution
 [08](#day-8-seven-segment-search) | Seven Segment Search | [File](advent8/advent8.py)
 [09](#day-9-smoke-basin) | Smoke Basin | [File](advent9/advent9.py)
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
+---
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
 
