@@ -31,6 +31,7 @@ The pillow Python module is required to create these sweet heatmaps for the vent
 
 The change of state in each lanternfish cycle share some similarities to a primitive [LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
 
+```
 age[0] = age[1]
 age[1] = age[2]
 age[2] = age[3]
@@ -40,6 +41,7 @@ age[5] = age[6]
 age[6] = age[7] + age[0]
 age[7] = age[8]
 age[8] = age[0]
+```
 
 ![Day 6](img/day6out.png)
 
@@ -74,3 +76,5 @@ d = 7       | 4, 8     | 7 times AND not G
 e = 4       | 8        | 4 times
 f = 9       | 1,4,7,8  | 9 times
 g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
+
+## Day 9: Smoke Basin
