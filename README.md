@@ -93,7 +93,7 @@ g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
 
 ## Day 9: [Smoke Basin](advent9/advent9.py)
 
-Relevant [flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
+Relevant [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
 
 ```python
 def check(x,y,part):
