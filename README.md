@@ -43,7 +43,7 @@ The pillow Python module is required to create these sweet heatmaps for the vent
 
 ## Day 6: [Lanternfish](advent6/advent6.py)
 
-The change of state in each lanternfish cycle share some similarities to a primitive [LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
+The change of state in each lanternfish cycle share some similarities to a primitive ![LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
 
 ```
 age[0] = age[1]
@@ -92,6 +92,36 @@ f = 9       | 1,4,7,8  | 9 times
 g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
 
 ## Day 9: [Smoke Basin](advent9/advent9.py)
+
+Relevant ![flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
+
+```python
+def check(x,y,part):
+    global size; height = 0
+    
+    c = mat[x][y]   # current position
+    d = {           # direction (x,y) modifier
+        "up"    : (-1,0) if x > 0 else (0,0),
+        "down"  : (+1,0) if x < len(mat)-1 else (0,0),
+        "left"  : (0,-1) if y > 0 else (0,0),
+        "right" : (0,+1) if y < len(mat[0])-1 else (0,0)
+    }
+    
+    if part == 1:  # check directions
+        if all(c <= mat[x + d[i][0]][y + d[i][1]] for i in d):
+            height += c+1
+            lows.append((x,y))
+            visited.append((x,y))
+        return height
+    
+    elif part == 2:  # check recursively if not visited
+        for i in d:
+            xn = x + d[i][0]; yn = y + d[i][1]
+            if (xn,yn) not in visited and mat[xn][yn] != 9:
+                size += 1
+                visited.append((xn,yn))
+                check(xn,yn,2)
+```
 
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
