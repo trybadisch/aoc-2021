@@ -18,11 +18,63 @@ Day | Name | Solution
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
 
-![Day 1](img/carbon1.png)
+```python
+with open("input1") as f:
+    lines = f.readlines()
+
+def triple_sum(key):  # sum range(3)
+    total = 0
+    if (key+2) < len(lines):
+        for i in range(3):
+            total += int(lines[i+key])
+    return total
+
+def part(part):
+    count = prev = 0
+    for key in range(len(lines)):
+        # sum from part context
+        num = int(lines[key]) if part==1 else triple_sum(key)
+        if num > prev and prev != 0:
+            count += 1
+        prev = num
+    return count
+
+print("[+] Part 1:", part(1))
+print("[+] Part 2:", part(2))
+```
 
 ## Day 2: [Dive!](advent2/advent2.py)
 
-![Day 2](img/carbon2.png)
+```python
+with open("input2") as f:
+    lines = f.readlines()
+
+def part1():
+    forward = depth = 0
+    for i in lines:
+        if "forward" in i:
+            forward += int(i[-2:-1])
+        elif "up" in i:
+            depth -= int(i[-2:-1])
+        elif "down" in i:
+            depth += int(i[-2:-1])
+    return(forward * depth)
+
+def part2():
+    forward = depth = aim = 0
+    for i in lines:
+        if "forward" in i:
+            forward += int(i[-2:-1])
+            depth += aim * int(i[-2:-1])
+        elif "up" in i:
+            aim -= int(i[-2:-1])
+        elif "down" in i:
+            aim += int(i[-2:-1])
+    return(forward * depth)
+
+print("[+] Part 1:", part1())
+print("[+] Part 2:", part2())
+```
 
 ## Day 3: [Binary Diagnostic](advent3/advent3.py)
 
@@ -57,11 +109,46 @@ age[7] = age[8]
 age[8] = age[0]
 ```
 
+Minimal output code:
+
+```python
+with open("input6") as f:
+    lines = f.readlines() 
+fish = lines[0].strip().split(",")
+
+def reset_age():
+    age = [0]*9
+    for i in range(len(fish)):
+        age[int(fish[i])] += 1
+    return age
+
+def timeline(days):
+    age = reset_age()
+    for i in range(1,days+1):
+        aux = age[0]
+        for j in range(len(age)):
+            if j != 8:
+                age[j] = age[j+1]
+        age[6] += aux
+        age[8] = aux
+        
+        count = 0
+        for k in range(len(age)):
+            count += age[k]
+    
+    return count
+    
+part1 = timeline(80)
+part2 = timeline(256)
+print("[+] Day 80 =", part1)
+print("[+] Day 256 =", part2)
+```
+
 ![Day 6](img/day6out.png)
 
 ## Day 7: [The Treachery of Whales](advent7/advent7.py) (Crabs)
 
-Bruteforce solution also viable for Part 2 (check every possible position):
+Bruteforce also viable for Part 2 (check every possible position):
 
 ```python
 fuel = pos = 0
@@ -75,7 +162,20 @@ for i in range(max(crabs)):
         pos = i
 print("[+] Position =", pos, "/ Fuel =", fuel)
 ```
-![Day 7](img/carbon7.png)
+Optimized solution:
+
+```python
+with open("input7") as f:
+    crabs = [int(i) for i in f.readlines()[0].strip().split(",")]
+
+median = sorted(crabs)[len(crabs)//2]
+fuel = sum([abs(median-i) for i in crabs])
+print("[+] Part 1: Median =", median, "/ Fuel =", fuel)
+
+mean = sum(crabs)//len(crabs)
+fuel = sum([abs(mean-i) * (abs(mean-i)+1) // 2 for i in crabs])
+print("[+] Part 2: Mean =", mean, "/ Fuel =", fuel)
+```
 
 ## Day 8: [Seven Segment Search](advent8/advent8.py)
 
@@ -125,4 +225,43 @@ def check(x,y,part):
 
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
-![Day 10](img/carbon10.png)
+Minimal output code:
+
+```python
+with open("input10") as f:
+    lines = [l.strip() for l in f.readlines()]
+
+op = { "(":")", "[":"]", "{":"}", "<":">" }
+ed = { ")":"(", "]":"[", "}":"{", ">":"<" }
+points = { ")":(3,1), "]":(57,2), "}":(1197,3), ">":(25137,4) }
+
+p1 = 0
+p2 = []
+
+for l in lines:
+    queue = []
+    corrupt = False
+    for c in l:
+        if c in op:
+            queue.append(c)  # add open brackets to queue
+        else:
+            if queue[-1] == ed[c]:
+                queue.pop()  # remove bracket if closed
+            else:
+                corrupt = True
+                p1 += points[c][0]
+                break
+    
+    if not corrupt:  # part 2
+        complete = []
+        score = 0
+        # reverse queue and translate into closed bracket
+        for c in reversed(queue):
+            complete.append(op[c])
+            score = (score*5) + points[complete[-1]][1]
+        p2.append(score)
+     
+print("[+] Part 1 Result: ", p1)
+result = sorted(p2)[len(p2)//2]
+print("[+] Part 2 Result: ", result)
+```
