@@ -43,7 +43,7 @@ The pillow Python module is required to create these sweet heatmaps for the vent
 
 ## Day 6: [Lanternfish](advent6/advent6.py)
 
-The change of state in each lanternfish cycle share some similarities to a primitive ![LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
+The change of state in each lanternfish cycle share some similarities to a primitive [LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
 
 ```
 age[0] = age[1]
@@ -93,7 +93,7 @@ g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
 
 ## Day 9: [Smoke Basin](advent9/advent9.py)
 
-Relevant ![flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
+Relevant [flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
 
 ```python
 def check(x,y,part):
