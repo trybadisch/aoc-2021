@@ -10,7 +10,7 @@ Day | Name | Solution
 [04](#day-4-giant-squid-bingo) | Giant Squid | [Bingo](advent4/advent4.py)
 [05](#day-5-hydrotermal-venture) | Hydrotermal Venture | [File](advent5/advent5.py)
 [06](#day-6-lanternfish) | Lanternfish | [File](advent6/advent6.py)
-[07](#day-7-the-treachery-of-wales-crabs) | The Treachery of Whales | [Crabs](advent7/advent7.py)
+[07](#day-7-the-treachery-of-whales-crabs) | The Treachery of Whales | [Crabs](advent7/advent7.py)
 [08](#day-8-seven-segment-search) | Seven Segment Search | [File](advent8/advent8.py)
 [09](#day-9-smoke-basin) | Smoke Basin | [File](advent9/advent9.py)
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
