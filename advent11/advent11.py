@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-with open("input") as f:
+with open("input11") as f:
     lines = f.readlines()
 
 mat = [[int(y) for y in lines[x] if y.isnumeric()] for x in range(len(lines))]
