@@ -1,11 +1,35 @@
 #!/usr/bin/python3
 
+import curses
+from time import sleep
+
 with open("input11") as f:
     lines = f.readlines()
 
 mat = [[int(y) for y in lines[x] if y.isnumeric()] for x in range(len(lines))]
 
 flashes = sync = cycle = 0
+
+def visualization(screen, speed):
+    global cycle, flashes
+    curses.curs_set(0)
+    curses.start_color()
+    curses.use_default_colors()
+    screen.clear()
+    
+    for x in range(len(mat)):
+        for y in range(len(mat[x])):
+            if mat[x][y] == 0:
+                screen.attron(curses.A_BOLD)
+                screen.addstr(str(mat[x][y])+" ")
+                screen.attroff(curses.A_BOLD)
+            else:
+                screen.addstr(str(mat[x][y])+" ")
+        screen.addstr("\n")
+    screen.addstr("\n[+] Cycle: " + str(cycle))
+    screen.addstr("\n[+] Flashes: " + str(flashes))
+    screen.refresh()
+    sleep(speed)
 
 def direction(x,y):
     d = {
@@ -34,6 +58,11 @@ def flash(x,y):
                 if mat[xn][yn] > 9:
                     flash(xn,yn)
 
+option = input("Show visualization? [Y/N]: ").lower()
+if option == "y":
+    speed = int(input("Frame speed [0 = Fastest] - [9 = Slowest]: "))
+    speed = float("0."+str(speed)) if speed != 0 else 0.05
+
 while True:
     cycle += 1; sync = 0
     for x in range(len(mat)):
@@ -42,6 +71,10 @@ while True:
     for x in range(len(mat)):
         for y in range(len(mat[x])):
             flash(x,y)
+    
+    if option == "y":
+        curses.wrapper(visualization, speed)
+            
     if cycle == 100:
         print("[+] Flashes:", flashes)
     if sync == len(mat)*len(mat[0]):

@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+import curses
+from time import sleep
+
 with open("input9") as f:
     lines = f.readlines()
 
@@ -9,6 +12,30 @@ mat = [[int(y) for y in lines[x] if y.isnumeric()] for x in range(len(lines))]
 global size
 height = 0
 lows = []; visited = []; basins = []
+
+def visualization(screen):
+    curses.curs_set(0)
+    curses.start_color()
+    curses.use_default_colors()
+    screen.clear()
+    
+    error = "\n[-] ERROR: Terminal size too small, resize (multiple times) with [Ctrl-]\n"
+    
+    try:
+        for x in range(len(mat)):
+            for y in range(len(mat[x])):
+                if mat[x][y] == 9:
+                    screen.addstr("  ")
+                elif (x,y) in visited:
+                    screen.attron(curses.A_BOLD)
+                    screen.addstr(str(mat[x][y])+" ")
+                    screen.attroff(curses.A_BOLD)
+                else:
+                    screen.addstr(str(mat[x][y])+" ")
+            screen.addstr("\n")
+    except:
+        exit(error)
+    screen.refresh()
 
 def check(x,y,part):
     global size
@@ -36,7 +63,9 @@ def check(x,y,part):
                 size += 1
                 visited.append((xn,yn))
                 check(xn,yn,2)
-           
+
+option = input("Show visualization? [Y/N]: ").lower()
+
 for x in range(len(mat)):
     for y in range(len(mat[x])):
         height += check(x,y,1)
@@ -46,6 +75,9 @@ for i in range(len(lows)):
     size = 1
     check(lows[i][0],lows[i][1],2)
     basins.append(size)
+    
+    if option == "y":
+        curses.wrapper(visualization)
     
 # get max 3 values
 result = (lambda z : z[0]*z[1]*z[2])([i for i in sorted(basins)[-3:]])

@@ -90,7 +90,7 @@ If it works it works.
 
 ## Day 5: [Hydrotermal Venture](advent5/advent5.py)
 
-The pillow Python module is required to create these sweet heatmaps for the vents. Install with `pip install pillow`.
+`pillow` module required to create these sweet heatmaps for the vents. Install with `pip install pillow`.
 
 ![Day 5](img/day5out.png)
 
@@ -224,6 +224,8 @@ def check(x,y,part):
                 check(xn,yn,2)
 ```
 
+![Day 9](img/day9output.gif)
+
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
 Minimal output code:
@@ -268,4 +270,6 @@ print("[+] Part 2 Result: ", result)
 ```
 
 ## Day 11: [Dumbo Octopus](advent11/advent11.py)
+
+![Day 11](img/day11output.gif)
 
