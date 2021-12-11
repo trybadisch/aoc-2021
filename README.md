@@ -19,6 +19,9 @@ Day | Name | Solution
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
 
+<details>
+  <summary>Show code</summary>
+
 ```python
 with open("input1") as f:
     lines = f.readlines()
@@ -43,6 +46,7 @@ def part(part):
 print("[+] Part 1:", part(1))
 print("[+] Part 2:", part(2))
 ```
+</details>
 
 ## Day 2: [Dive!](advent2/advent2.py)
 
