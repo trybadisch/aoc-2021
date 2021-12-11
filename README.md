@@ -224,7 +224,7 @@ def check(x,y,part):
                 check(xn,yn,2)
 ```
 
-`curses` unoptimized visualization added as an afterthought:
+Unoptimized `curses` visualization added as an afterthought:
 
 ![Day 9](img/day9out.gif)
 
