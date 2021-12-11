@@ -46,4 +46,4 @@ while True:
         print("[+] Flashes:", flashes)
     if sync == len(mat)*len(mat[0]):
         print("[+] Synchronization:", cycle, "cycles")
-        exit()
+        break
