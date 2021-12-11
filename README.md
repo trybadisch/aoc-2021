@@ -14,6 +14,7 @@ Day | Name | Solution
 [08](#day-8-seven-segment-search) | Seven Segment Search | [File](advent8/advent8.py)
 [09](#day-9-smoke-basin) | Smoke Basin | [File](advent9/advent9.py)
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
+[11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
 ---
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
@@ -265,3 +266,6 @@ print("[+] Part 1 Result: ", p1)
 result = sorted(p2)[len(p2)//2]
 print("[+] Part 2 Result: ", result)
 ```
+
+## Day 11: [Dumbo Octopus](advent11/advent11.py)
+

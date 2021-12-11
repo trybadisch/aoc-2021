@@ -23,7 +23,7 @@ def check(x,y,part):
     }
     
     if part == 1:  # check directions
-        if all(c <= mat[x+(d[i][0])][y+(d[i][1])] for i in d):
+        if all(c <= mat[x + d[i][0]][y + d[i][1]] for i in d):
             height += c+1
             lows.append((x,y))
             visited.append((x,y))
