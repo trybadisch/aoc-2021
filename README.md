@@ -224,7 +224,7 @@ def check(x,y,part):
                 check(xn,yn,2)
 ```
 
-![Day 9](img/day9output.gif)
+![Day 9](img/day9out.gif)
 
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
@@ -271,5 +271,5 @@ print("[+] Part 2 Result: ", result)
 
 ## Day 11: [Dumbo Octopus](advent11/advent11.py)
 
-![Day 11](img/day11output.gif)
+![Day 11](img/day11out.gif)
 
