@@ -2,7 +2,7 @@
 
 [Advent of Code](https://adventofcode.com/) provides programming puzzle challenges through December. The daily solution attempts along with the provided inputs will be uploaded in each day folder.
 
-<details>
+<h3><details>
   <summary>Expand table contents</summary>
 
 Day | Name | Solution
@@ -19,13 +19,12 @@ Day | Name | Solution
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
 
-</details>
-
----
+</details></h3>
+</br>
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
 
-<details>
+<h4><details>
   <summary>Show code</summary>
 
 ```python
@@ -52,11 +51,12 @@ def part(part):
 print("[+] Part 1:", part(1))
 print("[+] Part 2:", part(2))
 ```
-</details>
+</details></h4>
+</br>
 
 ## Day 2: [Dive!](advent2/advent2.py)
 
-<details>
+<h4><details>
   <summary>Show code</summary>
   
 ```python
@@ -89,11 +89,13 @@ def part2():
 print("[+] Part 1:", part1())
 print("[+] Part 2:", part2())
 ```
-</details>
+</details></h4>
+</br>
 
 ## Day 3: [Binary Diagnostic](advent3/advent3.py)
 
 ~~Requires refactoring to use a bitmask filter. Currently requires to manually check if last "filtered" numbers in CO2 exist in input.~~
+</br></br>
 
 ## Day 4: [Giant Squid](advent4/advent4.py) (Bingo)
 
@@ -101,12 +103,14 @@ Result is being thrown as an exit code in an exception block due to reusing code
 If it works it works.
 
 ![Day 4](img/day4out.png)
+</br></br>
 
 ## Day 5: [Hydrotermal Venture](advent5/advent5.py)
 
 `pillow` module required to create these sweet heatmaps for the vents. Install with `pip install pillow`.
 
 ![Day 5](img/day5out.png)
+</br></br>
 
 ## Day 6: [Lanternfish](advent6/advent6.py)
 
@@ -124,7 +128,7 @@ age[7] = age[8]
 age[8] = age[0]
 ```
 
-<details>
+<h4><details>
   <summary>Show code (minimal output)</summary>
 
 ```python
@@ -159,15 +163,17 @@ part2 = timeline(256)
 print("[+] Day 80 =", part1)
 print("[+] Day 256 =", part2)
 ```
-</details>
+</details></h4>
+</br>
 
 ![Day 6](img/day6out.png)
+</br></br>
 
 ## Day 7: [The Treachery of Whales](advent7/advent7.py) (Crabs)
 
 Bruteforce also viable for Part 2 (check every possible position):
 
-<details>
+<h4><details>
   <summary>Bruteforce function</summary>
 
 ```python
@@ -182,9 +188,9 @@ for i in range(max(crabs)):
         pos = i
 print("[+] Position =", pos, "/ Fuel =", fuel)
 ```
-</details>
+</details></h4>
 
-<details>
+<h4><details>
   <summary>Optimized solution</summary>
 
 ```python
@@ -199,7 +205,8 @@ mean = sum(crabs)//len(crabs)
 fuel = sum([abs(mean-i) * (abs(mean-i)+1) // 2 for i in crabs])
 print("[+] Part 2: Mean =", mean, "/ Fuel =", fuel)
 ```
-</details>
+</details></h4>
+</br>
 
 ## Day 8: [Seven Segment Search](advent8/advent8.py)
 
@@ -214,12 +221,13 @@ d = 7       | 4, 8     | 7 times AND not G
 e = 4       | 8        | 4 times
 f = 9       | 1,4,7,8  | 9 times
 g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
+</br>
 
 ## Day 9: [Smoke Basin](advent9/advent9.py)
 
 Relevant [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
 
-<details>
+<h4><details>
   <summary>Show code</summary>
 
 ```python
@@ -249,15 +257,17 @@ def check(x,y,part):
                 visited.append((xn,yn))
                 check(xn,yn,2)
 ```
-</details>
+</details></h4>
+</br>
 
 Unoptimized `curses` visualization added as an afterthought:
 
 ![Day 9](img/day9out.gif)
+</br></br>
 
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
-<details>
+<h4><details>
   <summary>Show code (minimal output)</summary>
 
 ```python
@@ -298,11 +308,12 @@ print("[+] Part 1 Result: ", p1)
 result = sorted(p2)[len(p2)//2]
 print("[+] Part 2 Result: ", result)
 ```
-</details>
+</details></h4>
+</br>
 
 ## Day 11: [Dumbo Octopus](advent11/advent11.py)
 
 `curses` visualization:
 
 ![Day 11](img/day11out.gif)
-
+</br></br>
