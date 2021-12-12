@@ -331,7 +331,7 @@ Unoptimized [DFS](https://en.wikipedia.org/wiki/Depth-first_search) algorithm fo
   <summary>Show code</summary>
 
 ```python
-with open("input") as f:
+with open("input12") as f:
     lines = f.readlines()
 
 graph = {}  # adjacency list -> { a: [b,c], b: [a,c] }

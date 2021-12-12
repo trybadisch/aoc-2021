@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-with open("input") as f:
+with open("input12") as f:
     lines = f.readlines()
 
 graph = {}  # adjacency list -> { a: [b,c], b: [a,c] }
