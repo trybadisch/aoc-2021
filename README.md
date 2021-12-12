@@ -1,7 +1,10 @@
 # Advent of Code 2021 (Python)
 
 [Advent of Code](https://adventofcode.com/) provides programming puzzle challenges through December. The daily solution attempts along with the provided inputs will be uploaded in each day folder.
-  
+
+<details>
+  <summary>Expand table contents</summary>
+
 Day | Name | Solution
 :---:|:---:|:---:
 [01](#day-1-sonar-sweep) | Sonar Sweep | [File](advent1/advent1.py)
@@ -15,6 +18,9 @@ Day | Name | Solution
 [09](#day-9-smoke-basin) | Smoke Basin | [File](advent9/advent9.py)
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
+
+</details>
+
 ---
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
