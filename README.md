@@ -50,6 +50,9 @@ print("[+] Part 2:", part(2))
 
 ## Day 2: [Dive!](advent2/advent2.py)
 
+<details>
+  <summary>Show code</summary>
+  
 ```python
 with open("input2") as f:
     lines = f.readlines()
@@ -80,6 +83,7 @@ def part2():
 print("[+] Part 1:", part1())
 print("[+] Part 2:", part2())
 ```
+</details>
 
 ## Day 3: [Binary Diagnostic](advent3/advent3.py)
 
@@ -114,7 +118,8 @@ age[7] = age[8]
 age[8] = age[0]
 ```
 
-Minimal output code:
+<details>
+  <summary>Show code (minimal output)</summary>
 
 ```python
 with open("input6") as f:
@@ -148,12 +153,16 @@ part2 = timeline(256)
 print("[+] Day 80 =", part1)
 print("[+] Day 256 =", part2)
 ```
+</details>
 
 ![Day 6](img/day6out.png)
 
 ## Day 7: [The Treachery of Whales](advent7/advent7.py) (Crabs)
 
 Bruteforce also viable for Part 2 (check every possible position):
+
+<details>
+  <summary>Bruteforce function</summary>
 
 ```python
 fuel = pos = 0
@@ -167,7 +176,10 @@ for i in range(max(crabs)):
         pos = i
 print("[+] Position =", pos, "/ Fuel =", fuel)
 ```
-Optimized solution:
+</details>
+
+<details>
+  <summary>Optimized solution</summary>
 
 ```python
 with open("input7") as f:
@@ -181,6 +193,7 @@ mean = sum(crabs)//len(crabs)
 fuel = sum([abs(mean-i) * (abs(mean-i)+1) // 2 for i in crabs])
 print("[+] Part 2: Mean =", mean, "/ Fuel =", fuel)
 ```
+</details>
 
 ## Day 8: [Seven Segment Search](advent8/advent8.py)
 
@@ -199,6 +212,9 @@ g = 7       | 8        | 7 times AND only in 8 (not in 1,4,7)
 ## Day 9: [Smoke Basin](advent9/advent9.py)
 
 Relevant [Flood fill](https://en.wikipedia.org/wiki/Flood_fill) function code that recursively checks neighbouring cells from lowest points:
+
+<details>
+  <summary>Show code</summary>
 
 ```python
 def check(x,y,part):
@@ -227,6 +243,7 @@ def check(x,y,part):
                 visited.append((xn,yn))
                 check(xn,yn,2)
 ```
+</details>
 
 Unoptimized `curses` visualization added as an afterthought:
 
@@ -234,7 +251,8 @@ Unoptimized `curses` visualization added as an afterthought:
 
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
-Minimal output code:
+<details>
+  <summary>Show code (minimal output)</summary>
 
 ```python
 with open("input10") as f:
@@ -274,6 +292,7 @@ print("[+] Part 1 Result: ", p1)
 result = sorted(p2)[len(p2)//2]
 print("[+] Part 2 Result: ", result)
 ```
+</details>
 
 ## Day 11: [Dumbo Octopus](advent11/advent11.py)
 
