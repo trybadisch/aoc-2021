@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import curses
-from time import sleep
 
 with open("input9") as f:
     lines = f.readlines()
