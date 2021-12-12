@@ -328,7 +328,7 @@ print("[+] Part 2 Result: ", result)
 Unoptimized [DFS](https://en.wikipedia.org/wiki/Depth-first_search) algorithm for graph traversal (takes around 3 minutes for Part 2). This was the first day I had to seek some tips as to how to proceed, so props to the [AoC subreddit](https://www.reddit.com/r/adventofcode/).
 
 <h4><details>
-  <summary>Show code (minimal output)</summary>
+  <summary>Show code</summary>
 
 ```python
 with open("input") as f:
