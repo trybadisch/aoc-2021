@@ -1,6 +1,8 @@
 # Advent of Code 2021 (Python)
 
-[Advent of Code](https://adventofcode.com/) provides programming puzzle challenges through December. The daily solution attempts along with the provided inputs will be uploaded in each day folder.
+[Advent of Code](https://adventofcode.com/) provides programming puzzle challenges through December. The daily solution attempts along with the provided inputs will be uploaded in each day folder. Also added a neat menu as launcher:
+
+![Menu](img/menu.png)
 
 <h4><details>
   <summary>Expand table contents</summary>
