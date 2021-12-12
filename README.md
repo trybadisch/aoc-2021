@@ -2,7 +2,7 @@
 
 [Advent of Code](https://adventofcode.com/) provides programming puzzle challenges through December. The daily solution attempts along with the provided inputs will be uploaded in each day folder.
 
-<h3><details>
+<h4><details>
   <summary>Expand table contents</summary>
 
 Day | Name | Solution
@@ -19,7 +19,9 @@ Day | Name | Solution
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
 
-</details></h3>
+</details></h4>
+
+---
 </br>
 
 ## Day 1: [Sonar Sweep](advent1/advent1.py)
