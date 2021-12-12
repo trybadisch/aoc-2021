@@ -61,7 +61,7 @@ def flash(x,y):
 option = input("Show visualization? [Y/N]: ").lower()
 if option == "y":
     speed = int(input("Frame speed [0 = Fastest] - [9 = Slowest]: "))
-    speed = float("0."+str(speed)) if speed != 0 else 0.05
+    speed = float("0."+str(speed)) if speed != 0 else 0.03
 
 while True:
     cycle += 1; sync = 0

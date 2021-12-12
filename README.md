@@ -18,6 +18,7 @@ Day | Name | Solution
 [09](#day-9-smoke-basin) | Smoke Basin | [File](advent9/advent9.py)
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
+[12](#day-12-passage-pathing) | Passage Pathing | [File](advent12/advent12.py)
 
 </details></h4>
 
@@ -319,3 +320,45 @@ print("[+] Part 2 Result: ", result)
 
 ![Day 11](img/day11out.gif)
 </br></br>
+
+## Day 12: [Passage Pathing](advent12/advent12.py)
+
+<h4><details>
+  <summary>Show code (minimal output)</summary>
+
+```python
+with open("input") as f:
+    lines = f.readlines()
+
+graph = {}  # adjacency list -> { a: [b,c], b: [a,c] }
+for l in lines:
+    x,y = l.strip().split("-")
+    graph[x] = [y] if x not in graph else graph[x] + [y]
+    graph[y] = [x] if y not in graph else graph[y] + [x]
+
+# call recursively with a copy of visited paths to branch itself
+def search(node, visited, part, twice=False):
+    global paths
+    visited += [node]
+    if node == "end":  # add path and return
+        if visited not in paths:
+            paths += [visited]
+        return
+    
+    for neighbour in graph[node]:  # check adjacent nodes
+        if neighbour.isupper() or neighbour not in visited:
+            search(neighbour, visited.copy(), part, twice)
+            
+        if part==2:  # visit lowercase twice if flag isn't set yet
+            if neighbour.islower() and not twice and neighbour != "start":
+                search(neighbour, visited.copy(), part, True)
+
+paths = []
+search("start", [], 1)
+print("[+] Part 1 Result: ", len(paths))
+paths = []
+search("start", [], 2)
+print("[+] Part 2 Result : ", len(paths))
+```
+</details></h4>
+</br>
