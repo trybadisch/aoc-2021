@@ -94,9 +94,9 @@ print("[+] Part 2:", part2())
 </details></h4>
 </br>
 
-## Day 3: [Binary Diagnostic](advent3/advent3.py)
+## ~~Day 3: [Binary Diagnostic](advent3/advent3.py)~~
 
-~~Requires refactoring to use a bitmask filter. Currently requires to manually check if last "filtered" numbers in CO2 exist in input.~~
+Requires refactoring to use a bitmask filter. Currently requires to manually check if last "filtered" numbers in CO2 exist in input.
 </br></br>
 
 ## Day 4: [Giant Squid](advent4/advent4.py) (Bingo)
