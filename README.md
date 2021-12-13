@@ -345,8 +345,7 @@ def search(node, visited, part, twice=False):
     global paths
     visited += [node]
     if node == "end":  # add path and return
-        if visited not in paths:
-            paths += [visited]
+        paths.add(tuple(visited))
         return
     
     for neighbour in graph[node]:  # check adjacent nodes
@@ -357,12 +356,11 @@ def search(node, visited, part, twice=False):
             if neighbour.islower() and not twice and neighbour != "start":
                 search(neighbour, visited.copy(), part, True)
 
-paths = []
+paths = set()
 search("start", [], 1)
 print("[+] Part 1 Result: ", len(paths))
-paths = []
 search("start", [], 2)
-print("[+] Part 2 Result : ", len(paths))
+print("[+] Part 2 Result: ", len(paths))
 ```
 </details></h4>
 </br>
