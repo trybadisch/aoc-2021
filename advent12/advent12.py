@@ -12,7 +12,7 @@ for l in lines:
 # call recursively with a copy of visited paths to branch itself
 def search(node, visited, part, twice=False):
     global paths
-    visited += [node]
+    visited.append(node)
     if node == "end":  # add path and return
         paths.add(tuple(visited))
         return
