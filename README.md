@@ -368,5 +368,5 @@ print("[+] Part 2 Result: ", len(paths))
 
 ## Day 13: [Transparent Origami](advent13/advent13.py)
 
-![Day 13](img/day13out.gif)
+![Day 13](img/day13out.png)
 </br></br>
