@@ -369,13 +369,9 @@ print("[+] Part 2 Result: ", len(paths))
 
 ## Day 13: [Transparent Origami](advent13/advent13.py)
 
-<<<<<<< HEAD
 Requires major refactoring. I lost too much time trying to debug irregular halves due to defining the sheet size through max coordinates instead of using the first fold instructions from the start.
 
-![Day 13](img/day13out.gif)
-=======
 ![Day 13](img/day13out.png)
->>>>>>> 0875ffbef96e521e3bc5342034906ad9938db0ac
 </br></br>
 
 ## Day 14: [Extended Polymerization](advent14/advent14.py)
