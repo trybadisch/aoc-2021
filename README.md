@@ -22,6 +22,7 @@ Day | Name | Solution
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
 [12](#day-12-passage-pathing) | Passage Pathing | [File](advent12/advent12.py)
 [13](#day-13-transparent-origami) | Transparent Origami | [File](advent13/advent13.py)
+[14](#day-14-extended-polymerization) | Extended Polymerization | [File](advent14/advent14.py)
 
 </details></h4>
 
@@ -368,5 +369,12 @@ print("[+] Part 2 Result: ", len(paths))
 
 ## Day 13: [Transparent Origami](advent13/advent13.py)
 
+Requires major refactoring. I lost too much time trying to debug irregular halves due to defining the sheet size through max coordinates instead of using the first fold instructions from the start.
+
 ![Day 13](img/day13out.gif)
+</br></br>
+
+## Day 14: [Extended Polymerization](advent14/advent14.py)
+
+Similar to the lanternfish challenge on [day 6](#day-6-lanternfish).
 </br></br>

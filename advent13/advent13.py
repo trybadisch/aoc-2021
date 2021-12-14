@@ -4,7 +4,7 @@
 with open("input13") as f:
     lines = f.readlines()
 
-coords, folds = ("".join(lines)).strip().split("\n\n")
+coords, folds = "".join(lines).strip().split("\n\n")
 coords = coords.split("\n")
 folds = folds.split("\n")
 
