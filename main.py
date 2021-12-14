@@ -13,7 +13,7 @@ banner = '''\
                         / / () / /| |
                        /___\__/___|_|\
 '''
-today = 12
+today = 13
 days = [i for i in range(1,today+1)]
 print(banner)
 print("\nCalendar: ", *("["+(str(i).rjust(2, "0") if i<=today else "  ")+"]" for i in range(1,13+1)), sep="")

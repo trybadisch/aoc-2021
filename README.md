@@ -21,6 +21,7 @@ Day | Name | Solution
 [10](#day-10-syntax-scoring) | Syntax Scoring | [File](advent10/advent10.py)
 [11](#day-11-dumbo-octopus) | Dumbo Octopus | [File](advent11/advent11.py)
 [12](#day-12-passage-pathing) | Passage Pathing | [File](advent12/advent12.py)
+[13](#day-13-transparent-origami) | Transparent Origami | [File](advent13/advent13.py)
 
 </details></h4>
 
@@ -364,3 +365,8 @@ print("[+] Part 2 Result: ", len(paths))
 ```
 </details></h4>
 </br>
+
+## Day 13: [Transparent Origami](advent13/advent13.py)
+
+![Day 13](img/day13out.gif)
+</br></br>
