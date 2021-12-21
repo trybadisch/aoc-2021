@@ -37,5 +37,5 @@ for vx in range(0,300):
         sav_vx = vx; sav_vy = vy
         launch(vx, vy)
 
-print("[+] Max:", max(max_y))
-print("[+] Valid:", len(valid))
+print("[+] Day 17-1:", max(max_y))
+print("[+] Day 17-2:", len(valid))

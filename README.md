@@ -426,8 +426,8 @@ for vx in range(0,300):
         sav_vx = vx; sav_vy = vy
         launch(vx, vy)
 
-print("[+] Max:", max(max_y))
-print("[+] Valid:", len(valid))
+print("[+] Part 1 Result:", max(max_y))
+print("[+] Part 2 Result:", len(valid))
 ```
 </details></h4>
 </br>
