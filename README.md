@@ -23,8 +23,8 @@ Day | Name | Solution
 [12](#day-12-passage-pathing) | Passage Pathing | [File](advent12/advent12.py)
 [13](#day-13-transparent-origami) | Transparent Origami | [File](advent13/advent13.py)
 [14](#day-14-extended-polymerization) | Extended Polymerization | [File](advent14/advent14.py)
-[15]
-[16]
+~~[15]~~
+~~[16]~~
 [17](#day-17-trick-shot) | Trick Shot | [File](advent17/advent17.py)
 
 </details></h4>
@@ -385,6 +385,7 @@ Similar to the lanternfish challenge on [day 6](#day-6-lanternfish).
 ## ~~Day 15~~
 
 ## ~~Day 16~~
+</br>
 
 ## Day 17: [Trick Shot](advent17/advent17.py)
 
