@@ -20,8 +20,8 @@ for i in range(len(poly)-1):
 alpha[poly[-1]] += 1
 
 ''' For every pair, sum the value of its insertion to alpha
-Add the combination of pairs with its insertion and remove the original
-eg: CH: B -> add(CB, BH), remove(CH) '''
+    Add the combination of pairs with its insertion and remove the original
+    eg: CH: B -> add(CB, BH); remove(CH) '''
 def polymer():
     # create deepcopy of pairs count for current iteration
     copy = {}
@@ -43,8 +43,8 @@ def minmax():
 
 for i in range(10):
     polymer()
-print("[+] Part 1 Result:", minmax())
+print("[+] Day 14-1:", minmax())
 
 for i in range(40-10):
     polymer()
-print("[+] Part 2 Result:", minmax())
+print("[+] Day 14-2:", minmax())

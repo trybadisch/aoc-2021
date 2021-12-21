@@ -26,5 +26,5 @@ def part2():
             aim += int(i[-2:-1])
     return(forward * depth)
 
-print("[+] Part 1:", part1())
-print("[+] Part 2:", part2())
+print("[+] Day 2-1:", part1())
+print("[+] Day 2-2:", part2())

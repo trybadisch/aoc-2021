@@ -20,5 +20,5 @@ def part(part):
         prev = num
     return count
 
-print("[+] Part 1:", part(1))
-print("[+] Part 2:", part(2))
+print("[+] Day 1-1:", part(1))
+print("[+] Day 1-2:", part(2))

@@ -68,7 +68,7 @@ option = input("Show visualization? [Y/N]: ").lower()
 for x in range(len(mat)):
     for y in range(len(mat[x])):
         height += check(x,y,1)
-print("[+] Part 1 Result:", height)
+print("\n[+] Day 9-1:", height)
 
 for i in range(len(lows)):
     size = 1
@@ -80,4 +80,4 @@ for i in range(len(lows)):
     
 # get max 3 values
 result = (lambda z : z[0]*z[1]*z[2])([i for i in sorted(basins)[-3:]])
-print("[+] Part 2 Result:", result)
+print("[+] Day 9-2:", result)

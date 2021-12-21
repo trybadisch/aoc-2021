@@ -23,6 +23,9 @@ Day | Name | Solution
 [12](#day-12-passage-pathing) | Passage Pathing | [File](advent12/advent12.py)
 [13](#day-13-transparent-origami) | Transparent Origami | [File](advent13/advent13.py)
 [14](#day-14-extended-polymerization) | Extended Polymerization | [File](advent14/advent14.py)
+[15]
+[16]
+[17](#day-17-trick-shot) | Trick Shot | [File](advent17/advent17.py)
 
 </details></h4>
 
@@ -136,7 +139,7 @@ age[8] = age[0]
 ```
 
 <h4><details>
-  <summary>Show code (minimal output)</summary>
+  <summary>Show code</summary>
 
 ```python
 with open("input6") as f:
@@ -206,11 +209,11 @@ with open("input7") as f:
 
 median = sorted(crabs)[len(crabs)//2]
 fuel = sum([abs(median-i) for i in crabs])
-print("[+] Part 1: Median =", median, "/ Fuel =", fuel)
+print("[+] Part 1 (Median):", fuel)
 
 mean = sum(crabs)//len(crabs)
 fuel = sum([abs(mean-i) * (abs(mean-i)+1) // 2 for i in crabs])
-print("[+] Part 2: Mean =", mean, "/ Fuel =", fuel)
+print("[+] Part 2 (Mean):  ", fuel)
 ```
 </details></h4>
 </br>
@@ -275,7 +278,7 @@ Unoptimized `curses` visualization added as an afterthought:
 ## Day 10: [Syntax Scoring](advent10/advent10.py)
 
 <h4><details>
-  <summary>Show code (minimal output)</summary>
+  <summary>Show code</summary>
 
 ```python
 with open("input10") as f:
@@ -311,9 +314,9 @@ for l in lines:
             score = (score*5) + points[complete[-1]][1]
         p2.append(score)
      
-print("[+] Part 1 Result: ", p1)
+print("[+] Part 1 Result:", p1)
 result = sorted(p2)[len(p2)//2]
-print("[+] Part 2 Result: ", result)
+print("[+] Part 2 Result:", result)
 ```
 </details></h4>
 </br>
@@ -360,9 +363,9 @@ def search(node, visited, part, twice=False):
 
 paths = set()
 search("start", [], 1)
-print("[+] Part 1 Result: ", len(paths))
+print("[+] Part 1 Result:", len(paths))
 search("start", [], 2)
-print("[+] Part 2 Result: ", len(paths))
+print("[+] Part 2 Result:", len(paths))
 ```
 </details></h4>
 </br>
@@ -378,3 +381,52 @@ Requires major refactoring. I lost too much time trying to debug irregular halve
 
 Similar to the lanternfish challenge on [day 6](#day-6-lanternfish).
 </br></br>
+
+## ~~Day 15~~
+
+## ~~Day 16~~
+
+## Day 17: [Trick Shot](advent17/advent17.py)
+
+<h4><details>
+  <summary>Show code</summary>
+
+```python
+with open("input17") as f:
+    lines = f.readlines()[0].split(": ")[1]
+
+tar_x, tar_y = lines.split(", ")
+tar_x = [int(x) for x in tar_x.split("=")[1].split("..")]
+tar_y = [int(y) for y in tar_y.split("=")[1].split("..")]
+
+max_y = []
+valid = set()
+
+def launch(vx, vy, x=0, y=0, tmp=0):
+    global sav_vx, sav_vy
+    x += vx; y += vy
+    vx += 1 if vx < 0 else (-1 if vx > 0 else 0)
+    vy -= 1
+
+    tmp = y if y > tmp else tmp
+
+    if x >= tar_x[0] and x <= tar_x[1]:
+        if y >= tar_y[0] and y <= tar_y[1]:
+            max_y.append(tmp)
+            valid.add((sav_vx, sav_vy))
+            return
+
+    if x <= tar_x[1] and y >= tar_y[0]:
+        launch(vx, vy, x, y, tmp)
+        return
+
+for vx in range(0,300):
+    for vy in range(-150,150):
+        sav_vx = vx; sav_vy = vy
+        launch(vx, vy)
+
+print("[+] Max:", max(max_y))
+print("[+] Valid:", len(valid))
+```
+</details></h4>
+</br>

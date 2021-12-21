@@ -79,14 +79,12 @@ def part2():
             if sort in display:
                 display_count.append(str(display[sort]))
 
-        print("[", *dig1, "|", *dig2, "]")
         display_count = int("".join(display_count))
-        print("[ Display: ", display_count, "]\n")
         total_count += display_count
         
     return total_count
 
 part1 = part1()
 part2 = part2()
-print("[+] Part 1 Result: ", part1)
-print("[+] Part 2 Result: ", part2, "\n")
+print("[+] Day 8-1:", part1)
+print("[+] Day 8-2:", part2)

@@ -76,7 +76,7 @@ while True:
         curses.wrapper(visualization, speed)
             
     if cycle == 100:
-        print("[+] Flashes:", flashes)
+        print("\n[+] Day 11-1:", flashes)
     if sync == len(mat)*len(mat[0]):
-        print("[+] Synchronization:", cycle, "cycles")
+        print("[+] Day 11-2:", cycle)
         break

@@ -5,11 +5,11 @@ with open("input7") as f:
 
 median = sorted(crabs)[len(crabs)//2]
 fuel = sum([abs(median-i) for i in crabs])
-print("[+] Part 1: Median =", median, "/ Fuel =", fuel)
+print("[+] Day 7-1 (Median):", fuel)
 
 mean = sum(crabs)//len(crabs)
 fuel = sum([abs(mean-i) * (abs(mean-i)+1) // 2 for i in crabs])
-print("[+] Part 2: Mean =", mean, "/ Fuel =", fuel)
+print("[+] Day 7-2 (Mean):  ", fuel)
 
 ''' Bruteforce Part 2:
 fuel = pos = 0

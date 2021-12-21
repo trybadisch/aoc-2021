@@ -10,9 +10,8 @@ def reset_age():
         age[int(fish[i])] += 1
     return age
 
-def timeline(days):
+def timeline(days, option):
     age = reset_age()
-    print("\nStart state:", age, "\n")
     for i in range(1,days+1):
         aux = age[0]
         for j in range(len(age)):
@@ -24,18 +23,17 @@ def timeline(days):
         count = 0
         for k in range(len(age)):
             count += age[k]
-            
-        if i == days:
-            print("Day ", i, "\t Total: ", count, " - New: ", age[8], sep="")
-            # print final distribution
+        
+        # print distribution
+        if option == "y" and i == days:
+            print("\nDay ", i, "\t Total: ", count, " - New: ", age[8], sep="")
             for i in range(len(age)):
                 print("Age[", i, "]: ", "█" * int((age[i]/count)*250), sep="")
-            print()
             
-    print("Final state: ", age, "\n", "-" * 50, sep="")
     return count
-    
-part1 = timeline(80)
-part2 = timeline(256)
-print("\n[+] Day 80 =", part1)
-print("[+] Day 256 =", part2, "\n")
+
+option = input("Show distribution? [Y/N]: ").lower()
+part1 = timeline(80, option)
+part2 = timeline(256, option)
+print("\n[+] Day 6-1:", part1)
+print("[+] Day 6-2:", part2)

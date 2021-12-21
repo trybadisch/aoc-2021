@@ -85,5 +85,5 @@ def check_folds():
                     first = first+1 if sheet[i][j] == "█" else first
     return first
 
-print("[+] Part 1 Result:", check_folds())
-print("[+] Part 2 Result:\n\n", print_sheet(), sep="")
+print("[+] Day 13-1:", check_folds())
+print("[+] Day 13-2:\n\n", print_sheet(), sep="")

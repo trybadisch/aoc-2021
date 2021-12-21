@@ -27,6 +27,6 @@ def search(node, visited, part, twice=False):
 
 paths = set()
 search("start", [], 1)
-print("[+] Part 1 Result: ", len(paths))
+print("[+] Day 12-1:", len(paths))
 search("start", [], 2)
-print("[+] Part 2 Result: ", len(paths))
+print("[+] Day 12-2:", len(paths))
