@@ -20,10 +20,9 @@ def enlarge(image):  # enlarge image
     global switch  # change infinity value on each iteration
     char = "." if switch == 0 else "#"
     
-    image.insert(0, char*len(image[2]))
-    image.insert(0, char*len(image[2]))
-    image.append(char*len(image[2]))
-    image.append(char*len(image[2]))
+    for i in range(2):
+        image.insert(0, char*len(image[2]))
+        image.append(char*len(image[2]))
     for x in range(len(image)):
         image[x] = (char*2) + image[x] + (char*2)
         
