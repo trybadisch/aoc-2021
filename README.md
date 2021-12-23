@@ -127,7 +127,7 @@ If it works it works.
 
 ## Day 6: [Lanternfish](advent6/advent6.py)
 
-The change of state in each lanternfish cycle share some similarities to a primitive [LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
+The change of states in each lanternfish cycle share some similarities with a primitive [LFSR](https://en.wikipedia.org/wiki/Linear-feedback_shift_register). They can be simplified as:
 
 ```
 age[0] = age[1]
