@@ -26,6 +26,9 @@ Day | Name | Solution
 ~~[15]~~
 ~~[16]~~
 [17](#day-17-trick-shot) | Trick Shot | [File](advent17/advent17.py)
+~~[18]~~
+~~[19]~~
+[20](#day-20-trench-map) | Trench Map | [File](advent20/advent20.py)
 
 </details></h4>
 
@@ -430,4 +433,12 @@ print("[+] Part 1 Result:", max(max_y))
 print("[+] Part 2 Result:", len(valid))
 ```
 </details></h4>
+</br>
+
+## ~~Day 18~~
+
+## ~~Day 19~~
+</br>
+
+## Day 20: [Trench Map](advent20/advent20.py)
 </br>
